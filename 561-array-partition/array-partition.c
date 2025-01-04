@@ -4,7 +4,6 @@ int cmp(const void *a, const void *b)
 }
 
 int arrayPairSum(int* nums, int numsSize) {
-    
     qsort(nums,numsSize,sizeof(int),cmp);
     
     int sum =0;
