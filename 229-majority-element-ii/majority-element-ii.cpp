@@ -1,0 +1,11 @@
+class Solution {
+public:
+    vector<int> majorityElement(vector<int>& nums) {
+        unordered_map<int,int> mp;
+        vector<int> res;
+        for(int n:nums) mp[n]++;
+        for(auto &p:mp)
+            if(p.second>(nums.size()/3)) res.push_back(p.first);
+        return res;
+    }
+};
