@@ -4,9 +4,10 @@ public:
         vector<int> freq(26,0);
         for(int c:magazine)
             freq[c-'a']++;
-        for(int c:ransomNote)
+        for(int c:ransomNote){
          freq[c-'a']--;
-        for(int x:freq) if(x<0) return false;
+         if(freq[c-'a']<0) return false;
+         }
         return true;
     }
 };
